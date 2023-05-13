@@ -27,9 +27,19 @@ ThemeData darkTheme() {
       ),
     ),
     bottomSheetTheme: const BottomSheetThemeData(
-        backgroundColor: Coloors.greyBackground,
-        modalBackgroundColor: Coloors.greyBackground,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.vertical(top: Radius.circular(20)))),
+      backgroundColor: Coloors.greyBackground,
+      modalBackgroundColor: Coloors.greyBackground,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(20),
+        ),
+      ),
+    ),
+    dialogBackgroundColor: Coloors.greyBackground,
+    dialogTheme: DialogTheme(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+    ),
   );
 }

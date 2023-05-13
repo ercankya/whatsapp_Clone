@@ -3,8 +3,8 @@ import 'package:whatsapp_clone/common/extension/custom_theme_extension.dart';
 import 'package:whatsapp_clone/common/utils/coloors.dart';
 
 import '../../../common/widgets/custom_elevated_button.dart';
-import '../../../common/widgets/language_button.dart';
-import '../../widgets/privacy_and_terms.dart';
+import '../widgets/language_button.dart';
+import '../widgets/privacy_and_terms.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
