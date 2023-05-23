@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/common/extension/custom_theme_extension.dart';
-import 'package:whatsapp_clone/common/utils/coloors.dart';
+import 'package:whatsapp_clone/common/routes/routes.dart';
 
 import '../../../common/widgets/custom_elevated_button.dart';
 import '../widgets/language_button.dart';
@@ -8,6 +8,12 @@ import '../widgets/privacy_and_terms.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
+  navigateToLoginPage(context) {
+    Navigator.of(context).pushNamedAndRemoveUntil(
+      Routes.login,
+      (route) => false,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,16 +37,16 @@ class WelcomePage extends StatelessWidget {
           Expanded(
             child: Column(
               children: [
-                Text(
+                const Text(
                   'Welcome to WhatsApp Clone',
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
                 const PrivacyAndTerms(),
                 CustomElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => navigateToLoginPage(context),
                   text: 'AGREE AND CONTINUE',
                 ),
-                SizedBox(height: 50),
+                const SizedBox(height: 50),
                 const LanguageButton()
               ],
             ),
