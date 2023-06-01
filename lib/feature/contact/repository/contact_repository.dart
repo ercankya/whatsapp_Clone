@@ -40,6 +40,7 @@ class ContactRepository {
               username: contact.displayName,
               uid: '',
               profileImageUrl: '',
+              lastSeen: 0,
               phoneNumber: contact.phones[0].number.replaceAll(' ', ' '),
               active: false,
               groupId: [],
