@@ -57,5 +57,13 @@ ThemeData darkTheme() {
         borderRadius: BorderRadius.circular(10),
       ),
     ),
+    listTileTheme: const ListTileThemeData(
+      iconColor: Coloors.greyDark,
+      tileColor: Coloors.backgroundDark,
+    ),
+    switchTheme: const SwitchThemeData(
+      thumbColor: MaterialStatePropertyAll(Coloors.greenDark),
+      trackColor: MaterialStatePropertyAll(Color(0xFF344047)),
+    ),
   );
 }

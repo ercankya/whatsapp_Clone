@@ -17,6 +17,7 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
     authAppBarTextColor: Coloors.greenLight,
     photoIconBgColor: Color(0xFFF0F2F3),
     photoIconColor: Color(0xFF9DAAB3),
+    profilePageBg: Color(0xFFF7F8FA),
   );
   static const darkMode = CustomThemeExtension(
     circleImageColor: Coloors.greenDark,
@@ -27,6 +28,7 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
     authAppBarTextColor: Color(0xFFE9EDEF),
     photoIconBgColor: Color(0xFF283339),
     photoIconColor: Color(0xFF61717B),
+    profilePageBg: Color(0xFF0B141A),
   );
   final Color? circleImageColor;
   final Color? greyColor;
@@ -36,6 +38,7 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
   final Color? authAppBarTextColor;
   final Color? photoIconBgColor;
   final Color? photoIconColor;
+  final Color? profilePageBg;
 
   const CustomThemeExtension({
     this.circleImageColor,
@@ -46,6 +49,7 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
     this.authAppBarTextColor,
     this.photoIconBgColor,
     this.photoIconColor,
+    this.profilePageBg,
   });
 
   @override
@@ -58,6 +62,7 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
     Color? authAppBarTextColor,
     Color? photoIconColor,
     Color? photoIconBgColor,
+    Color? profilePageBg,
   }) {
     return CustomThemeExtension(
         circleImageColor: circleImageColor ?? this.circleImageColor,
@@ -68,7 +73,8 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
         photoIconBgColor: photoIconBgColor ?? this.photoIconBgColor,
         photoIconColor: photoIconColor ?? this.photoIconColor,
         langBtnHighlightColor:
-            langBtnHighlightColor ?? this.langBtnHighlightColor);
+            langBtnHighlightColor ?? this.langBtnHighlightColor,
+        profilePageBg: profilePageBg ?? this.profilePageBg);
   }
 
   @override
@@ -86,6 +92,7 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
           Color.lerp(authAppBarTextColor, other.authAppBarTextColor, t),
       langBtnHighlightColor:
           Color.lerp(langBtnHighlightColor, other.langBtnHighlightColor, t),
+      profilePageBg: Color.lerp(profilePageBg, other.profilePageBg, t),
     );
   }
 }
